@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: background-color 0.5s ease;
 }
 
 header {
@@ -39,4 +40,50 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+ul li a {
+    color: #0073e6;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+}
+
+#home {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#home p {
+    line-height: 1.6;
+}
+
+#greeting {
+    color: #288119;
+}
+
+#colorButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#currentColor {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.5s ease;
 }
