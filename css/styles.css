@@ -11,6 +11,7 @@ header {
     color: white;
     padding: 1rem;
     text-align: center;
+    transition: transform 0.5s ease; /* Smooth transition for transform changes */
 }
 
 nav ul {
@@ -21,6 +22,7 @@ nav ul {
 nav ul li {
     display: inline;
     margin: 0 10px;
+    transition: transform 0.5s ease; /* Smooth transition for transform changes */
 }
 
 nav ul li a {
@@ -30,7 +32,7 @@ nav ul li a {
 
 main {
     padding: 2rem;
-    padding-bottom: 20rem; /* Add padding to the bottom to prevent overlap with the footer */
+    padding-bottom: 6rem; /* Add padding to the bottom to prevent overlap with the footer */
 }
 
 footer {
@@ -82,6 +84,29 @@ ul li a:hover {
     font-size: 16px;
     cursor: pointer;
     margin-right: 10px;
+    border: none;
+    border-radius: 25px; /* Make the buttons rounded */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+#colorButton {
+    background-color: #0073e6;
+    color: white;
+}
+
+#colorButton:hover {
+    background-color: #005bb5;
+}
+
+#partyModeButton {
+    background: linear-gradient(135deg, #ff007f, #ff8c00);
+    color: white;
+}
+
+#partyModeButton:hover {
+    background: linear-gradient(135deg, #ff005f, #ff6c00);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Enhance the shadow on hover */
 }
 
 #currentColor {
@@ -100,4 +125,34 @@ ul li a:hover {
 
 .hidden {
     display: none;
+}
+
+/* Party Mode Animations */
+@keyframes partyHeader {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes partyNav {
+    0%, 100% {
+        transform: rotate(0);
+    }
+    25% {
+        transform: rotate(5deg);
+    }
+    75% {
+        transform: rotate(-5deg);
+    }
+}
+
+.party-mode-header {
+    animation: partyHeader 1s infinite;
+}
+
+.party-mode-nav li {
+    animation: partyNav 1.5s infinite;
 }

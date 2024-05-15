@@ -4,6 +4,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const partyModeButton = document.getElementById('partyModeButton');
     const currentColorDiv = document.getElementById('currentColor');
     const epilepsyWarning = document.getElementById('epilepsyWarning');
+    const bodyElement = document.body;
+    const headerElement = document.querySelector('header h1');
+    const navElement = document.querySelector('nav ul');
+    const navElements = document.querySelectorAll('nav ul li');
     const hour = new Date().getHours();
     let greeting;
 
@@ -37,15 +41,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let partyModeInterval = null;
     let epilepsyWarningAcknowledged = false;
 
-    function getContrastYIQ(hexcolor) {
-        hexcolor = hexcolor.replace('#', '');
-        const r = parseInt(hexcolor.substr(0, 2), 16);
-        const g = parseInt(hexcolor.substr(2, 2), 16);
-        const b = parseInt(hexcolor.substr(4, 2), 16);
-        const yiq = ((r * 299) + (g * 587) + (b * 114)) / 1000;
-        return (yiq >= 128) ? 'black' : 'white';
-    }
-
     function changeColor() {
         let colorIndex;
         do {
@@ -65,6 +60,18 @@ document.addEventListener('DOMContentLoaded', () => {
         lastColorIndex = colorIndex;
     }
 
+    function activatePartyMode() {
+        console.log('Activating Party Mode');
+        epilepsyWarning.classList.add('hidden');
+        headerElement.classList.add('party-mode-header');
+        navElement.classList.add('party-mode-nav');
+        navElements.forEach((el) => {
+            el.classList.add('party-mode-nav');
+        });
+        partyModeInterval = setInterval(changeColor, 500);
+        partyModeButton.textContent = 'Turn Off Party Mode';
+    }
+
     colorButton.addEventListener('click', changeColor);
 
     partyModeButton.addEventListener('click', () => {
@@ -72,20 +79,20 @@ document.addEventListener('DOMContentLoaded', () => {
             clearInterval(partyModeInterval);
             partyModeInterval = null;
             partyModeButton.textContent = 'Party Mode';
+            headerElement.classList.remove('party-mode-header');
+            navElement.classList.remove('party-mode-nav');
+            navElements.forEach((el) => el.classList.remove('party-mode-nav'));
         } else {
             if (!epilepsyWarningAcknowledged) {
                 epilepsyWarning.classList.remove('hidden');
-                if (confirm("Party Mode may trigger seizures for people with photosensitive epilepsy. Do you want to continue?")) {
+                if (confirm("Party mode may trigger seizures for people with photosensitive epilepsy. Do you want to continue?")) {
                     epilepsyWarningAcknowledged = true;
-                    epilepsyWarning.classList.add('hidden');
-                    partyModeInterval = setInterval(changeColor, 200);
-                    partyModeButton.textContent = 'Turn Off Party Mode';
+                    activatePartyMode();
                 } else {
                     epilepsyWarning.classList.add('hidden');
                 }
             } else {
-                partyModeInterval = setInterval(changeColor, 200);
-                partyModeButton.textContent = 'Turn Off Party Mode';
+                activatePartyMode();
             }
         }
     });
