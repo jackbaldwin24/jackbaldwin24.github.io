@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    transition: background-color 0.5s ease;
+    transition: background-color 0.5s ease, color 0.5s ease; /* Smooth transition for background and text colors */
 }
 
 header {
@@ -30,7 +30,7 @@ nav ul li a {
 
 main {
     padding: 2rem;
-    padding-bottom: 4rem;
+    padding-bottom: 20rem; /* Add padding to the bottom to prevent overlap with the footer */
 }
 
 footer {
@@ -72,19 +72,32 @@ ul li a:hover {
 }
 
 #greeting {
-    color: #288119;
+    color: #0073e6;
+    transition: color 0.5s ease; /* Smooth transition for greeting text color */
 }
 
-#colorButton {
+#colorButton, #partyModeButton {
     margin-top: 20px;
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
+    margin-right: 10px;
 }
 
 #currentColor {
     margin-top: 10px;
     font-size: 18px;
     font-weight: bold;
-    transition: color 0.5s ease;
+    transition: color 0.5s ease; /* Smooth transition for current color text */
+}
+
+#epilepsyWarning {
+    margin-top: 20px;
+    font-size: 14px;
+    color: red;
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
 }
