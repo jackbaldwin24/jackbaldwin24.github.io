@@ -2,12 +2,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const greetingElement = document.getElementById('greeting');
     const colorButton = document.getElementById('colorButton');
     const partyModeButton = document.getElementById('partyModeButton');
-    const currentColorDiv = document.getElementById('currentColor');
     const epilepsyWarning = document.getElementById('epilepsyWarning');
-    const bodyElement = document.body;
     const headerElement = document.querySelector('header h1');
     const navElement = document.querySelector('nav ul');
     const navElements = document.querySelectorAll('nav ul li');
+    const partyAudio = document.getElementById('partyAudio'); // Get the audio element
     const hour = new Date().getHours();
     let greeting;
 
@@ -51,8 +50,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         document.body.style.backgroundColor = backgroundColor;
         document.body.style.color = textColor;
-        currentColorDiv.textContent = `Current Color: ${backgroundColor}`;
-        currentColorDiv.style.color = textColor;
 
         greetingElement.style.color = greetingTextColor;
         console.log(`Background Color: ${backgroundColor}, Text Color: ${textColor}, Greeting Color: ${greetingTextColor}`);
@@ -67,21 +64,33 @@ document.addEventListener('DOMContentLoaded', () => {
         navElement.classList.add('party-mode-nav');
         navElements.forEach((el) => {
             el.classList.add('party-mode-nav');
+            el.style.setProperty('--random', Math.random());
         });
-        partyModeInterval = setInterval(changeColor, 500);
+        partyModeInterval = setInterval(changeColor, 200); // Decrease the interval to 200ms for faster color changes
+        partyAudio.play().catch(error => console.error('Error playing audio:', error)); // Play the audio
         partyModeButton.textContent = 'Turn Off Party Mode';
+    }
+
+    function deactivatePartyMode() {
+        console.log('Deactivating Party Mode');
+        clearInterval(partyModeInterval);
+        partyModeInterval = null;
+        headerElement.classList.remove('party-mode-header');
+        navElement.classList.remove('party-mode-nav');
+        navElements.forEach((el) => {
+            el.classList.remove('party-mode-nav');
+            el.style.removeProperty('--random');
+        });
+        partyAudio.pause(); // Pause the audio
+        partyAudio.currentTime = 0; // Reset the audio
+        partyModeButton.textContent = 'Party Mode';
     }
 
     colorButton.addEventListener('click', changeColor);
 
     partyModeButton.addEventListener('click', () => {
         if (partyModeInterval) {
-            clearInterval(partyModeInterval);
-            partyModeInterval = null;
-            partyModeButton.textContent = 'Party Mode';
-            headerElement.classList.remove('party-mode-header');
-            navElement.classList.remove('party-mode-nav');
-            navElements.forEach((el) => el.classList.remove('party-mode-nav'));
+            deactivatePartyMode();
         } else {
             if (!epilepsyWarningAcknowledged) {
                 epilepsyWarning.classList.remove('hidden');
