@@ -10,15 +10,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const hour = new Date().getHours();
     let greeting;
 
-    if (hour < 12) {
-        greeting = 'Good Morning';
+    if (hour < 6) {
+        greeting = 'Burning the midnight oil, I see!';
+    } else if (hour < 12) {
+        greeting = 'Good Morning,';
     } else if (hour < 18) {
-        greeting = 'Good Afternoon';
+        greeting = 'Good Afternoon,';
     } else {
-        greeting = 'Good Evening';
+        greeting = 'Good Evening,';
     }
 
-    greetingElement.textContent = `${greeting}, Welcome to My Website!`;
+    greetingElement.textContent = `${greeting} Welcome to My Website!`;
 
     // Array of color pairs [backgroundColor, textColor, greetingTextColor]
     const colorPairs = [

@@ -139,30 +139,19 @@ ul li a:hover {
     transition: color 0.5s ease; /* Smooth transition for greeting text color */
 }
 
-#colorButton, #partyModeButton {
+/* Styles for the party mode button */
+#partyModeButton {
+    background: linear-gradient(135deg, #ff007f, #ff8c00);
+    color: white;
     margin-top: 20px;
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
     margin-right: 10px;
     border: none;
-    border-radius: 25px; /* Make the buttons rounded */
+    border-radius: 25px; /* Make the button rounded */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
-}
-
-#colorButton {
-    background-color: #0073e6;
-    color: white;
-}
-
-#colorButton:hover {
-    background-color: #005bb5;
-}
-
-#partyModeButton {
-    background: linear-gradient(135deg, #ff007f, #ff8c00);
-    color: white;
+    transition: background 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
 }
 
 #partyModeButton:hover {
@@ -208,4 +197,51 @@ ul li a:hover {
     animation: partyNav 1s infinite; /* Increase the duration to slow down the rotation */
     animation-duration: calc(0.5s + 0.5s * var(--random)); /* Adjust to slower duration */
     animation-delay: calc(0.2s * var(--random));
+}
+
+/* Styles for general buttons */
+.styled-button {
+    background-color: #0073e6;
+    color: white;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 10px;
+    border: none;
+    border-radius: 25px; /* Make the buttons rounded */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.styled-button:hover {
+    background-color: #005bb5; /* Darker shade on hover */
+}
+
+/* Contact Form Styling */
+#contact {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#contact h2 {
+    margin-bottom: 1rem;
+}
+
+#contact label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+#contact input, #contact textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
