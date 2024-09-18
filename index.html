@@ -1,255 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jack Baldwin Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <style>
-       
-        body {
-            background: linear-gradient(135deg, #2c3e50, #1f6041, #0f3b2e);
-            color: #ffffff;
-        }
-    
-        /* Profile section styling */
-        .profile-container {
-            display: flex;
-            align-items: center;
-            margin-top: 40px;
-        }
-        .profile-img {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            margin-right: 30px;
-            border: 4px solid #1f6041; /* Match with your jacket */
-        }
-        .profile-text h1 {
-            font-size: 3rem;
-            font-weight: 700;
-        }
-        .profile-text p {
-            font-size: 1.2rem;
-        }
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Jack Baldwin Portfolio</title>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
         
-        /* Social Icons Styling */
-        .social-icons a {
-            font-size: 2.5rem; /* Same size for both LinkedIn and GitHub */
-            margin: 0 15px; /* Space out the icons */
-            transition: transform 0.3s, color 0.3s; /* Smooth hover effect */
-            display: inline-block;
-        }
-
-        /* Specific styling for LinkedIn */
-        .social-icons a.linkedin-icon {
-            color: #0077b5; /* LinkedIn default color */
-        }
-
-        /* Specific styling for GitHub */
-        .social-icons a.github-icon {
-            color: #ffffff; /* Make GitHub icon white for contrast */
-        }
-
-        /* Hover effects for both icons */
-        .social-icons a.linkedin-icon:hover,
-        .social-icons a.github-icon:hover {
-            transform: scale(1.3); /* Same hover effect size */
-            color: #00cc99; /* Unified hover color for consistency */
-        }
-
-    
-        /* Section backgrounds */
-        .about-section, .projects-section, .experience-section, .skills-section {
-            padding: 40px;
-            margin: 20px;
-            background: #1f6041; /* Deep green that aligns with your jacket */
-            border-radius: 15px;
-            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
-        }
-    
-        /* Project cards */
-        .card {
-            background: #2c3e50; /* Darker tone for contrast */
-            color: #ffffff;
-            border: none;
-            border-radius: 15px;
-            padding: 20px;
-            margin: 10px 0;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: all 0.3s ease;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
-        }
-        .card h5 {
-            color: #00cc99; /* Accent color for titles */
-        }
+        <!-- External CSS -->
+        <link rel="stylesheet" href="styles/general.css">
+        <link rel="stylesheet" href="styles/profile.css">
+        <link rel="stylesheet" href="styles/sections.css">
+        <link rel="stylesheet" href="styles/skills.css">
+        <link rel="stylesheet" href="styles/footer.css">
+        <link rel="stylesheet" href="styles/banner.css">
+        <link rel="stylesheet" href="styles/contact.css">
+    </head>
+    <body>
         
-        /* Offset sections creatively */
-        .about-section {
-            margin-right: 100px;
-        }
-        .projects-section {
-            margin-left: 100px;
-        }
-        .experience-section {
-            margin-right: 100px;
-        }
-        .skills-section {
-            margin-left: 100px;
-        }
-    
-        /* Skills bar styling */
-        .skills-bar {
-            background-color: #34495e;
-            border-radius: 10px;
-            margin-bottom: 10px;
-            overflow: hidden;
-        }
-        .skills-bar-inner {
-            height: 20px;
-            background-color: #00cc99; /* Same accent color for consistency */
-            border-radius: 10px;
-        }
-        
-        /* Footer styling */
-        .footer {
-            background-color: #0f3b2e;
-            color: #ffffff;
-            padding: 10px;
-            font-size: 0.9rem;
-        }
-    </style>
-</head>
-<body>
-
-    <!-- Profile Section -->
-    <div class="container profile-container">
-        <img src="images/jackbaldwin.jpeg" alt="Jack Baldwin" class="profile-img">
-        <div class="profile-text">
-            <h1>Jack Baldwin</h1>
-            <p>Software Developer | DJ</p>
-            <div class="social-icons">
-                <a href="https://www.linkedin.com/in/jackson-baldwin" target="_blank" class="linkedin-icon">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://github.com/jackbaldwin24" target="_blank" class="github-icon">
-                    <i class="fab fa-github"></i>
-                </a>
+        <!-- Profile Section -->
+        <div class="container profile-container">
+            <img src="images/jackbaldwin.jpeg" alt="Jack Baldwin" class="profile-img rounded-circle">
+            <div class="profile-text">
+                <h1>Jack Baldwin</h1>
+                <p>Software Developer | DJ</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/jackson-baldwin" target="_blank" class="linkedin-icon">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/jackbaldwin24" target="_blank" class="github-icon">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#contactModal" class="github-icon">
+                        <i class="fa-regular fa-envelope"></i>
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
 
-    <!-- About Section -->
-    <section class="about-section">
-        <h2>About Me</h2>
-        <p>I’m a software developer based in Chicago, originally from Grand Rapids, MI. I went to Michigan State University, where some of my favorite classes were Software Design, Algorithm Engineering, and Data Structures. After graduating with a Bachelor’s in Computer Science, I moved to Madison, WI, to work at Epic Systems. On the Security team, I contributed to their access control systems and picked up skills in TypeScript, React, and C#.</p>
-        <p>Now, I’m a Mobile App Developer Intern at DayDream Technologies, a startup in East Lansing, MI. I’m building a cross-platform app using JavaScript and React Native. Outside of work, I enjoy DJing, going to live music events, and working on personal coding projects when I have the time.</p>
-    </section>
+        <!-- About Section -->
+        <section class="about-section">
+            <h2>About Me</h2>
+            <p>I’m a software developer based in Chicago, originally from Grand Rapids, MI. I went to Michigan State University, where some of my favorite classes were Software Design, Algorithm Engineering, and Data Structures. After graduating with a Bachelor’s in Computer Science, I moved to Madison, WI, to work at Epic Systems. On the Security team, I contributed to their access control systems and picked up skills in TypeScript, React, and C#.</p>
+            <p>Now, I’m a Mobile App Developer Intern at DayDream Technologies, a startup in East Lansing, MI. I’m building a cross-platform app using JavaScript and React Native. Outside of work, I enjoy DJing, going to live music events, and working on my personal coding projects.</p>
+        </section>
 
-    <!-- Projects Section -->
-    <section class="projects-section">
-        <h2>Projects</h2>
-        <div class="card mb-3 p-3 shadow-sm">
-            <h5>ID God (in development)</h5>
-            <p>A React Native mobile app allowing users to identify music from videos taken at concerts.</p>
-        </div>
-        <div class="card mb-3 p-3 shadow-sm">
-            <h5>DJ Etch-A-Sketch</h5>
-            <p>A representation of Etch-A-Sketch controlled by the jogwheels of a DJ controller. </p>
-        </div>
-    </section>
+        <!-- Projects Section -->
+        <section class="projects-section">
+            <h2>Projects</h2>
+            <div class="card mb-3 p-3 shadow-sm">
+                <h5>ID God (in development)</h5>
+                <p>A React Native mobile app allowing users to identify music from videos taken at concerts.</p>
+            </div>
+            <div class="card mb-3 p-3 shadow-sm">
+                <h5>DJ Etch-A-Sketch</h5>
+                <p>A representation of Etch-A-Sketch controlled by the jogwheels of a DJ controller. </p>
+            </div>
+        </section>
 
-    <!-- Experience Section -->
-    <section class="experience-section">
-        <h2>Experience</h2>
+        <!-- Experience Section -->
+        <section class="experience-section">
+            <h2>Experience</h2>
+            
+            <!-- DayDream Technologies -->
+            <div class="card mb-3 p-3 shadow-sm">
+                <h5>Mobile Application Developer (Internship) – DayDream Technologies</h5>
+                <p><strong>May 2024 – Present</strong></p>
+                <ul>
+                    <li>Developing an iOS and Android app using React Native for financial planning, wealth building, college savings, and retirement.</li>
+                    <li>Pioneered the development of the company website by enabling dynamic content management, improving scalability and reducing development time.</li>
+                    <li>Created project timelines and set up GitHub Projects for efficient team collaboration and task management.</li>
+                    <li>Implemented login functionality for a mobile app, ensuring secure user authentication and advancing project development milestones.</li>
+                </ul>
+            </div>
+
+            <!-- Epic Systems -->
+            <div class="card mb-3 p-3 shadow-sm">
+                <h5>Software Developer – Epic Systems</h5>
+                <p><strong>July 2022 – November 2023</strong></p>
+                <ul>
+                    <li>Led the technical migration of a legacy Visual Basic application to a modern web-based interface, enhancing system maintainability and user experience with a focus on security.</li>
+                    <li>Designed and implemented code for multiple projects, ensuring user authentication and authorization processes were secure.</li>
+                    <li>Guided projects through design and code reviews, instituting best practices and emphasizing secure coding standards.</li>
+                    <li>Enhanced administrative security and efficiency by improving template configurability, allowing more precise role-based access and minimizing security vulnerabilities.</li>
+                    <li>Refactored a legacy codebase, optimizing the user recompilation process, improving user access management, and reducing future development time.</li>
+                    <li>Collaborated with cross-functional teams, including Quality Assurance (QA), to detect and correct issues, reducing recurring bugs and improving software reliability.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills-section">
+            <h2>Technical Skills</h2>
+
+            <p>TypeScript</p>
+            <div class="skills-bar">
+                <div class="skills-bar-inner" style="width: 90%;"></div>
+            </div>
+
+            <p>React</p>
+            <div class="skills-bar">
+                <div class="skills-bar-inner" style="width: 85%;"></div>
+            </div>
+
+            <p>React Native</p>
+            <div class="skills-bar">
+                <div class="skills-bar-inner" style="width: 80%;"></div>
+            </div>
+
+            <p>C#</p>
+            <div class="skills-bar">
+                <div class="skills-bar-inner" style="width: 75%;"></div>
+            </div>
+
+            <p>JavaScript</p>
+            <div class="skills-bar">
+                <div class="skills-bar-inner" style="width: 90%;"></div>
+            </div>
+
+            <p>HTML/CSS</p>
+            <div class="skills-bar">
+                <div class="skills-bar-inner" style="width: 80%;"></div>
+            </div>
+
+            <p>Python</p>
+            <div class="skills-bar">
+                <div class="skills-bar-inner" style="width: 70%;"></div>
+            </div>
+
+            <p>Git/GitHub</p>
+            <div class="skills-bar">
+                <div class="skills-bar-inner" style="width: 85%;"></div>
+            </div>
+
+            <p>Svelte.js</p>
+            <div class="skills-bar">
+                <div class="skills-bar-inner" style="width: 65%;"></div>
+            </div>
+        </section>
+
+        <!-- Footer Section -->
+        <footer class="footer text-center py-3 d-flex justify-content-center align-items-center position-relative">
+            <p class="m-0">&copy; 2024 Jack Baldwin</p>
+            <button id="backToTopBtn" title="Go to top" class="btn btn-success position-absolute">
+                <i class="fas fa-arrow-up"></i>
+            </button>
+        </footer>
+
+        <!-- JavaScript for Scroll to Top Functionality -->
+        <script>
+            function backToTop() {
+                document.body.scrollTop = 0; // For Safari
+                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+            }
+
+            document.getElementById("backToTopBtn").addEventListener("click", backToTop);
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
         
-        <!-- DayDream Technologies -->
-        <div class="card mb-3 p-3 shadow-sm">
-            <h5>Mobile Application Developer (Internship) – DayDream Technologies</h5>
-            <p><strong>May 2024 – Present</strong></p>
-            <ul>
-                <li>Developing an iOS and Android app using React Native for financial planning, wealth building, college savings, and retirement.</li>
-                <li>Conducting research on backend solutions, including Azure and REST APIs, to ensure a robust and scalable application architecture.</li>
-                <li>Created project timelines and set up GitHub Projects for efficient team collaboration and task management.</li>
-                <li>Pioneered the development of the company website by enabling dynamic content management, improving scalability and reducing development time.</li>
-                <li>Implemented login functionality for a mobile app, ensuring secure user authentication and advancing project development milestones.</li>
-            </ul>
+        <!-- Contact Modal -->
+        <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content custom-modal-bg">
+                <div class="modal-header">
+                <h5 class="modal-title" id="contactModalLabel">Contact Me</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                <form id="contactForm" action="https://formspree.io/f/mkndajvw" method="POST">
+                    <div class="mb-3">
+                    <label for="name" class="form-label">Name:</label>
+                    <input type="text" id="name" name="name" class="form-control" required>
+                    </div>
+        
+                    <div class="mb-3">
+                    <label for="email" class="form-label">Email:</label>
+                    <input type="email" id="email" name="_replyto" class="form-control" required>
+                    </div>
+        
+                    <div class="mb-3">
+                    <label for="message" class="form-label">Message:</label>
+                    <textarea id="message" name="message" class="form-control" rows="4" required></textarea>
+                    </div>
+        
+                    <div class="d-grid">
+                    <button type="submit" class="btn btn-primary btn-lg">Send</button>
+                    </div>
+                </form>
+                </div>
+            </div>
+            </div>
         </div>
-
-        <!-- Epic Systems -->
-        <div class="card mb-3 p-3 shadow-sm">
-            <h5>Software Developer – Epic Systems</h5>
-            <p><strong>July 2022 – November 2023</strong></p>
-            <ul>
-                <li>Led the technical migration of a legacy Visual Basic application to a modern web-based interface, enhancing system maintainability and user experience with a focus on security.</li>
-                <li>Designed and implemented code for multiple projects, ensuring user authentication and authorization processes were secure.</li>
-                <li>Guided projects through design and code reviews, instituting best practices and emphasizing secure coding standards.</li>
-                <li>Enhanced administrative security and efficiency by improving template configurability, allowing more precise role-based access and minimizing security vulnerabilities.</li>
-                <li>Refactored a legacy codebase, optimizing the user recompilation process, improving user access management, and reducing future development time.</li>
-                <li>Collaborated with cross-functional teams, including Quality Assurance (QA), to detect and correct issues, reducing recurring bugs and improving software reliability.</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section class="skills-section">
-        <h2>Technical Skills</h2>
-
-        <p>TypeScript</p>
-        <div class="skills-bar">
-            <div class="skills-bar-inner" style="width: 90%;"></div>
-        </div>
-
-        <p>React</p>
-        <div class="skills-bar">
-            <div class="skills-bar-inner" style="width: 85%;"></div>
-        </div>
-
-        <p>React Native</p>
-        <div class="skills-bar">
-            <div class="skills-bar-inner" style="width: 80%;"></div>
-        </div>
-
-        <p>C#</p>
-        <div class="skills-bar">
-            <div class="skills-bar-inner" style="width: 75%;"></div>
-        </div>
-
-        <p>JavaScript</p>
-        <div class="skills-bar">
-            <div class="skills-bar-inner" style="width: 90%;"></div>
-        </div>
-
-        <p>HTML/CSS</p>
-        <div class="skills-bar">
-            <div class="skills-bar-inner" style="width: 80%;"></div>
-        </div>
-
-        <p>Python</p>
-        <div class="skills-bar">
-            <div class="skills-bar-inner" style="width: 70%;"></div>
-        </div>
-
-        <p>Git/GitHub</p>
-        <div class="skills-bar">
-            <div class="skills-bar-inner" style="width: 85%;"></div>
-        </div>
-
-        <p>Svelte.js</p>
-        <div class="skills-bar">
-            <div class="skills-bar-inner" style="width: 65%;"></div>
-        </div>
-    </section>
-
-    <footer class="footer text-center py-3">
-        <p>&copy; 2024 Jack Baldwin</p>
-    </footer>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
-</body>
+    </body>
 </html>

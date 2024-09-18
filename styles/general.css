@@ -1,0 +1,24 @@
+/* General styling */
+body {
+    background: linear-gradient(135deg, #2c3e50, #1f6041, #0f3b2e);
+    color: #ffffff;
+}
+
+/* Media query for small devices */
+@media (max-width: 768px) {
+    /* Center sections */
+    .about-section, .projects-section, .experience-section, .skills-section {
+        margin: 20px auto;
+        padding: 30px;
+    }
+
+    /* Stack profile elements vertically */
+    .profile-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .profile-img {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}

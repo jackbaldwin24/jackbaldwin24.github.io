@@ -1,0 +1,27 @@
+/* Back to Top Button Styling */
+#backToTopBtn {
+    font-size: 24px; /* Increase font size for a bigger button */
+    border-radius: 50%; /* Make the button round */
+    padding: 15px; /* Increase padding for a larger button */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    position: fixed;
+    bottom: 30px; /* Distance from the bottom */
+    right: 30px; /* Add more distance from the right */
+    background-color: #00cc99; /* Button color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add a shadow for better visibility */
+}
+
+#backToTopBtn:hover {
+    background-color: #00a379; /* Change color on hover */
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #0f3b2e;
+    color: #ffffff;
+    padding: 10px;
+    font-size: 0.9rem;
+    position: relative;
+}

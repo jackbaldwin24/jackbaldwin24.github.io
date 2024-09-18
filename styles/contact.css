@@ -1,0 +1,20 @@
+/* Modal Background Color */
+.custom-modal-bg {
+    background-color: #1f6041; /* Replace with your website background color */
+    color: #ffffff; /* Adjust text color if necessary */
+}
+
+/* Optional: Adjust modal header to match your style */
+.custom-modal-bg .modal-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Optional, adjust as needed */
+}
+
+/* Optional: Adjust modal body text color */
+.custom-modal-bg .modal-body {
+    color: #ffffff;
+}
+
+/* Button close color adjustment (if needed) */
+.custom-modal-bg .btn-close {
+    background-color: #ffffff; /* Adjust the close button color if needed */
+}
