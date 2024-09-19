@@ -1,24 +1,11 @@
-/* General styling */
+/* Adjusted background with more noticeable pattern overlay */
 body {
-    background: linear-gradient(135deg, #2c3e50, #1f6041, #0f3b2e);
+    background: linear-gradient(135deg, #2c3e50, #1f6041, #0f3b2e), 
+                linear-gradient(135deg, rgba(255, 255, 255, 0.05) 25%, transparent 25%),
+                linear-gradient(225deg, rgba(255, 255, 255, 0.05) 25%, transparent 25%);
+    background-size: 100% 100%, 40px 40px, 40px 40px; /* Adjust pattern size */
+    background-position: 0 0, 0 0, 20px 20px; /* Offset the pattern */
+    background-blend-mode: overlay; /* Blend pattern with gradient */
     color: #ffffff;
 }
 
-/* Media query for small devices */
-@media (max-width: 768px) {
-    /* Center sections */
-    .about-section, .projects-section, .experience-section, .skills-section {
-        margin: 20px auto;
-        padding: 30px;
-    }
-
-    /* Stack profile elements vertically */
-    .profile-container {
-        flex-direction: column;
-        text-align: center;
-    }
-    .profile-img {
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
-}

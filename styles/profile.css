@@ -1,15 +1,18 @@
 /* Profile Section */
 .profile-container {
     position: relative;
-    margin-top: 20px; /* Adjust as needed */
-    margin: 20px;
+    margin-top: -250px; /* Adjust as needed to overlap the banner */
+    margin-left: -20px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding: 30px;
-    background: linear-gradient(135deg,rgba(0, 0, 0, 0.4) 50%, transparent 50%);
+    padding-top: 45px;
+    padding-left: 45px;
+    padding-bottom: 25px;
+    background: linear-gradient(135deg,rgba(0, 0, 0, 0.4) 50%, transparent 40%);
     border-radius: 15px;
     width: auto;
+    z-index: 2; /* Profile is above the banner */
 }
 
 /* Profile Image */
@@ -41,11 +44,7 @@
     display: inline-block;
 }
 
-.social-icons a.linkedin-icon {
-    color: #0077b5;
-}
-
-.social-icons a.github-icon {
+.social-icons .linkedin-icon, a.github-icon {
     color: #ffffff;
 }
 
