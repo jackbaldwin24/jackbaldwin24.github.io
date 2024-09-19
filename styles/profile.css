@@ -1,17 +1,15 @@
 /* Profile Section */
 .profile-container {
     position: relative;
+    height: 250px;
     margin-top: -250px; /* Adjust as needed to overlap the banner */
-    margin-left: -20px;
+    margin-left: 0px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding-top: 45px;
-    padding-left: 45px;
-    padding-bottom: 25px;
+    padding: 30px;
     background: linear-gradient(135deg,rgba(0, 0, 0, 0.4) 50%, transparent 40%);
-    border-radius: 15px;
-    width: auto;
+    width: 1100px;
     z-index: 2; /* Profile is above the banner */
 }
 
@@ -52,15 +50,32 @@
     transform: scale(1.3);
     color: #00cc99;
 }
-
+/* Banner Container (Behind the Profile) */
+.banner-container {
+    position: relative;
+    width: 100%;
+    height: 250px; /* Adjust height based on your banner size */
+    overflow: hidden;
+    z-index: 1; /* Set behind the profile */
+}
 /* Media Queries for Small Screens */
 @media (max-width: 768px) {
+    /* Banner Container (Behind the Profile) */
+    .banner-container {
+        position: relative;
+        width: 100%;
+        height: 400px; /* Adjust height based on your banner size */
+        overflow: hidden;
+        z-index: 1; /* Set behind the profile */
+    }
     .profile-container {
         display: block;
         text-align: center;
+        justify-content: center;
+        height: 400px;
+        margin-top: -400px; /* Adjust as needed to overlap the banner */
         background: rgba(0, 0, 0, 0.4); /* Remove gradient and use solid background */
         padding: 20px;
-        margin: 0 auto; /* Center the entire section */
         width: 100%; /* Make sure it takes up the full width */
     }
 

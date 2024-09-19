@@ -1,11 +1,3 @@
-/* Banner Container (Behind the Profile) */
-.banner-container {
-    position: relative;
-    width: 100%;
-    height: 250px; /* Adjust height based on your banner size */
-    overflow: hidden;
-    z-index: 1; /* Set behind the profile */
-}
 
 .banner-image {
     width: 100%;
