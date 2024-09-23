@@ -58,6 +58,7 @@
     overflow: hidden;
     z-index: 1; /* Set behind the profile */
 }
+
 /* Media Queries for Small Screens */
 @media (max-width: 768px) {
     /* Banner Container (Behind the Profile) */
